@@ -1,11 +1,34 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <div class="app">
 
-<style scoped></style>
+    <header class="navbar">
+
+      <RouterLink to="/" class="logo">
+        SummerTech
+      </RouterLink>
+
+      <nav>
+        <RouterLink to="/">Inicio</RouterLink>
+        <RouterLink to="/tienda">Tienda</RouterLink>
+        <RouterLink to="/proyectos">Proyectos</RouterLink>
+        <RouterLink to="/servicios">Servicios</RouterLink>
+      </nav>
+
+      <RouterLink to="/carrito" class="cart">
+        🛒 Carrito
+      </RouterLink>
+
+    </header>
+
+    <RouterView />
+
+    <footer class="footer">
+      <strong>SummerTech</strong>
+
+      <p>
+        Electrónica • IoT • Software • IA
+      </p>
+    </footer>
+
+  </div>
+</template>
